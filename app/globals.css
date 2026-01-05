@@ -125,65 +125,26 @@
   }
 }
 
-/* Custom styles for better button visibility on dark background */
 @layer components {
+  /* 
+    Custom button styles removed to allow Shadcn UI variables 
+    to handle light/dark mode theming correctly.
+    Landing page specific styles are handled in page.tsx.
+  */
+}
 
-  /* All buttons base - ensure good contrast */
-  .btn,
-  button,
-  [role="button"] {
-    font-weight: 500 !important;
+@keyframes music-bar {
+
+  0%,
+  100% {
+    height: 10%;
   }
 
-  /* Primary variant buttons - white background, black text */
-  button:where(:not(.inline-flex)):where(:not([data-variant])),
-  button[data-variant="default"],
-  .bg-primary {
-    background-color: white !important;
-    color: black !important;
+  50% {
+    height: 100%;
   }
+}
 
-  button:where(:not(.inline-flex)):where(:not([data-variant])):hover,
-  button[data-variant="default"]:hover {
-    background-color: rgba(255, 255, 255, 0.9) !important;
-  }
-
-  /* Outline variant - white border and text */
-  button[data-variant="outline"],
-  .border.bg-background {
-    border-color: rgba(255, 255, 255, 0.3) !important;
-    color: white !important;
-    background-color: transparent !important;
-  }
-
-  button[data-variant="outline"]:hover {
-    background-color: rgba(255, 255, 255, 0.1) !important;
-  }
-
-  /* Ghost variant */
-  button[data-variant="ghost"] {
-    color: rgba(255, 255, 255, 0.8) !important;
-    background-color: transparent !important;
-  }
-
-  button[data-variant="ghost"]:hover {
-    background-color: rgba(255, 255, 255, 0.1) !important;
-    color: white !important;
-  }
-
-  /* Secondary variant */
-  button[data-variant="secondary"] {
-    background-color: rgba(255, 255, 255, 0.2) !important;
-    color: white !important;
-    border-color: rgba(255, 255, 255, 0.2) !important;
-  }
-
-  button[data-variant="secondary"]:hover {
-    background-color: rgba(255, 255, 255, 0.3) !important;
-  }
-
-  /* Ensure text inside buttons is always visible */
-  button * {
-    color: inherit !important;
-  }
+.animate-music-bar {
+  animation: music-bar 1s ease-in-out infinite;
 }
