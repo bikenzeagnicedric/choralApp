@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { AudioPlayer } from "@/components/rehearsal/AudioPlayer";
 import { UserMenu } from "@/components/auth/UserMenu";
 
+//test
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
