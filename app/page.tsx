@@ -6,6 +6,8 @@ import { createClient } from "@/utils/supabase/client";
 import { useEffect, useState } from "react";
 import { Mass } from "@/types";
 
+export const dynamic = "force-dynamic";
+
 export default function Home() {
   const [nextMass, setNextMass] = useState<Mass | null>(null);
   const supabase = createClient();
