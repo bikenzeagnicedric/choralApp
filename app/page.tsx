@@ -30,7 +30,7 @@ export default function Home() {
       {/* Content */}
       <div className="relative z-10 flex flex-col min-h-screen">
         {/* Bible Verse Header */}
-        <div className="pt-8 pb-4 px-4 text-center animate-in fade-in duration-700">
+        <div className="py-20 px-4 text-center animate-in fade-in duration-700">
           <p className="text-white/80 text-sm md:text-base italic max-w-3xl mx-auto">« Chantez au Seigneur un chant nouveau, car il a fait des merveilles. »</p>
           <p className="text-white/60 text-xs md:text-sm mt-1">— Psaume 98, 1</p>
         </div>
